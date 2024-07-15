@@ -1,0 +1,72 @@
+// 1
+function calculate(a, b) {
+  if (typeof a === "string") {
+    return false;
+  }
+
+  if (typeof b === "string") {
+    return false;
+  }
+
+  if (a === b) {
+    return "They are equal";
+  } else {
+  }
+  return "They are not equal";
+}
+
+console.log(calculate(2, 3));
+console.log(calculate(5, 5));
+console.log(calculate("2", 3));
+console.log(calculate(5, "5"));
+console.log(calculate("Nika", 3));
+
+// 2
+
+function farenToCels(farenheit) {
+  if (typeof farenheit === "string") {
+    return false;
+  } else {
+    let celsius = (farenheit - 32) / 1.8;
+    return celsius;
+  }
+}
+
+console.log(farenToCels(100));
+
+// 3
+
+function calculate1(a, operation, b) {
+  if (typeof a === "string") {
+    return false;
+  }
+  if (typeof b === "string") {
+    return false;
+  }
+  if (
+    (operation != "+") &
+    (operation != "*") &
+    (operation != "-") &
+    (operation != "/")
+  ) {
+    return false;
+  }
+  if (operation === "+") {
+    return a + b;
+  }
+  if (operation === "*") {
+    return a * b;
+  }
+  if (operation === "-") {
+    return a - b;
+  }
+  if (operation === "/") {
+    return a / b;
+  }
+}
+
+console.log(calculate1(2, "+", 2));
+console.log(calculate1(2, "*", 2));
+console.log(calculate1(2, "-", 2));
+console.log(calculate1(2, "/", 2));
+console.log(calculate1("nika", "/", 2));
